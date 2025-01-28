@@ -5,6 +5,7 @@
   --clr-text-body: ;
   --clr-accent: #fbd784;
   --border-radius: 0.25rem;
+  --easing: cubic-bezier(0.65, 0.05, 0.36, 1);
 }
 
 *,
@@ -58,7 +59,6 @@ button {
   border: 1px solid var(--clr-accent);
   background-color: var(--clr-accent);
   border-radius: var(--border-radius);
-  margin-top: 1rem;
 }
 
 .wrapper {
@@ -71,6 +71,7 @@ header.main-header {
   position: sticky;
   top: 0;
   z-index: 20;
+  padding: 1rem 0rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,4 +113,12 @@ section.hero::after {
 
 .services {
   min-height: 100vh;
+}
+
+/* Utility classes */
+
+.scrolled {
+  background-color: rgba(11, 29, 38, 0.8);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s var(--easing);
 }

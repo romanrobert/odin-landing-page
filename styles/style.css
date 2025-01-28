@@ -1,0 +1,115 @@
+:root {
+  --clr-bg: rgb(11, 29, 38);
+  --clr-light: #ffffff;
+  --clr-dark: ;
+  --clr-text-body: ;
+  --clr-accent: #fbd784;
+  --border-radius: 0.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--clr-bg);
+  color: var(--clr-light);
+  text-wrap: balance;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Bodoni Moda", serif;
+  position: relative;
+}
+
+h1:before {
+  content: "------ You're adventure begins here";
+  font-family: "Roboto", sans-serif;
+  position: absolute;
+  left: 0;
+  top: -1rem;
+  font-size: 1rem;
+  color: var(--clr-accent);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: currentColor;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--clr-accent);
+  background-color: var(--clr-accent);
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+}
+
+.wrapper {
+  max-width: 90rem;
+  padding-inline: clamp(1rem, 5vw, 2rem);
+  margin-inline: auto;
+}
+
+header.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: clamp(1rem, 5vw, 2rem);
+}
+
+header.main-header nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+section.hero {
+  position: relative;
+  z-index: 2;
+  background: url("../assets/images/image-2.jpeg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  margin-top: -100px;
+  display: flex;
+  align-items: end;
+}
+
+section.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 29, 38, 0) 0%,
+    rgba(11, 29, 38, 0.5) 60%,
+    rgba(11, 29, 38, 1) 100%
+  );
+  z-index: -1;
+}
+
+.hero-content p {
+  color: #e8e8e8;
+}
+
+.services {
+  min-height: 100vh;
+}

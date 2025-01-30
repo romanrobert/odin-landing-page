@@ -88,6 +88,11 @@ button.ghost {
   border: 1px solid transparent;
 }
 
+button.secondary {
+  background-color: var(--clr-bg);
+  color: var(--clr-accent);
+}
+
 .wrapper {
   max-width: 90rem;
   padding-inline: clamp(1rem, 5vw, 2rem);
@@ -239,6 +244,24 @@ section.testimonials {
   background-color: var(--clr-accent);
   border-radius: var(--border-radius);
   color: var(--clr-bg);
+  padding-block: 2rem;
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+.cta-content h3 {
+  max-width: 30ch;
+}
+
+footer {
+  padding-block: 2rem;
+}
+
+footer p {
+  text-align: center;
 }
 
 /* Utility classes */

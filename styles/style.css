@@ -1,8 +1,7 @@
 :root {
   --clr-bg: rgb(11, 29, 38);
   --clr-light: #ffffff;
-  --clr-dark: ;
-  --clr-text-body: ;
+
   --clr-accent: #fbd784;
   --border-radius: 0.25rem;
   --easing: cubic-bezier(0.65, 0.05, 0.36, 1);
@@ -44,6 +43,10 @@ h1:before {
 
 h1 {
   font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
 }
 
 h3 {
@@ -167,7 +170,7 @@ section.hero::after {
 
 .services {
   min-height: 100vh;
-  margin-top: 5rem;
+  margin-block: 5rem;
 }
 
 .service-list {
@@ -196,6 +199,46 @@ section.hero::after {
 .service-item img {
   aspect-ratio: 2/3;
   max-width: 30rem;
+}
+
+section.testimonials {
+  margin-block: 10rem;
+}
+
+.testimonials-content {
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+}
+
+.testimonials-content header p,
+.author {
+  color: var(--clr-accent);
+}
+
+.author {
+  margin-top: 1rem;
+}
+
+.testimonial {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  max-width: 35rem;
+  font-size: 1.25rem;
+}
+
+.avatar {
+  max-width: 4rem;
+  object-fit: cover;
+  aspect-ratio: 1;
+  border-radius: 100vw;
+}
+
+.cta-content {
+  background-color: var(--clr-accent);
+  border-radius: var(--border-radius);
+  color: var(--clr-bg);
 }
 
 /* Utility classes */

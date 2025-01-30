@@ -5,15 +5,21 @@ menuButton.addEventListener("click", () => {
   const icon = menuButton.querySelector("i");
 
   if (navigation.dataset.open === "false") {
-    navigation.style.transform = "translateX(0)";
-    navigation.dataset.open = "true";
-    icon.classList.remove("fa-bars");
-    icon.classList.add("fa-xmark");
+    navigation.style.display = "flex";
+    setTimeout(() => {
+      navigation.style.transform = "translateX(0)";
+      navigation.dataset.open = "true";
+      icon.classList.remove("fa-bars");
+      icon.classList.add("fa-xmark");
+    }, 10);
   } else {
     navigation.style.transform = "translateX(-100%)";
     navigation.dataset.open = "false";
     icon.classList.remove("fa-xmark");
     icon.classList.add("fa-bars");
+    setTimeout(() => {
+      navigation.style.display = "none";
+    }, 250);
   }
 });
 

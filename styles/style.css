@@ -310,6 +310,9 @@ footer p {
     max-width: 100%;
   }
 
+  .main-header {
+  }
+
   .menu {
     display: block;
   }
@@ -323,6 +326,8 @@ footer p {
     justify-content: center;
     gap: 2rem;
     top: 4rem;
+    transform: translateX(-100%);
+    transition: transform 0.3s var(--easing);
   }
 
   nav,

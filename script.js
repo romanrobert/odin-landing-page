@@ -1,3 +1,22 @@
+const menuButton = document.querySelector(".menu");
+const navigation = document.querySelector("nav");
+
+menuButton.addEventListener("click", () => {
+  const icon = menuButton.querySelector("i");
+
+  if (navigation.dataset.open === "false") {
+    navigation.style.transform = "translateX(0)";
+    navigation.dataset.open = "true";
+    icon.classList.remove("fa-bars");
+    icon.classList.add("fa-xmark");
+  } else {
+    navigation.style.transform = "translateX(-100%)";
+    navigation.dataset.open = "false";
+    icon.classList.remove("fa-xmark");
+    icon.classList.add("fa-bars");
+  }
+});
+
 document.addEventListener("scroll", () => {
   const header = document.querySelector(".main-header");
 

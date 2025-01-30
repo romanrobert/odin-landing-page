@@ -110,6 +110,21 @@ header.main-header {
   padding-inline: clamp(1rem, 5vw, 2rem);
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.logo {
+  flex-grow: 1;
+}
+
+.menu {
+  display: none;
+}
+
 header.main-header nav ul {
   display: flex;
   gap: 2.5rem;
@@ -293,5 +308,25 @@ footer p {
   .service-item img {
     aspect-ratio: unset;
     max-width: 100%;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    background: var(--clr-bg);
+    backdrop-filter: blur(5px);
+    inset: 0;
+    height: 50vh;
+    justify-content: center;
+    gap: 2rem;
+    top: 4rem;
+  }
+
+  nav,
+  nav ul {
+    flex-direction: column;
   }
 }

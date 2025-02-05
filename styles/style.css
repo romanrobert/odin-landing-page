@@ -310,9 +310,6 @@ footer p {
     max-width: 100%;
   }
 
-  .main-header {
-  }
-
   .menu {
     display: block;
   }
@@ -332,6 +329,20 @@ footer p {
 
   nav,
   nav ul {
+    flex-direction: column;
+  }
+
+  section.hero::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(11, 29, 38, 0.2) 0%,
+      rgba(11, 29, 38, 0.3) 50%,
+      rgba(11, 29, 38, 1) 100%
+    );
+  }
+
+  .testimonials-content,
+  .testimonial {
     flex-direction: column;
   }
 }
